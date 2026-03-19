@@ -1,3 +1,5 @@
+using System.Reflection.Emit;
+
 namespace EchoMessenger
 {
     public partial class Form1 : Form
@@ -30,11 +32,15 @@ namespace EchoMessenger
         private void btnSend_Click(object sender, EventArgs e)
         {
             string typed_msg;
-            typed_msg = txtMessege.Text;
+            typed_msg = txtMessege.Text.Trim();
             // 공백만 있거나 내용이 없는 문자열은 전송하지 않음
             if (!string.IsNullOrWhiteSpace(typed_msg))
             {
-                lstMessege.Items.Add(typed_msg);
+                
+                string formatted_msg = $"[{DateTime.Now:HH:mm:ss}] {typed_msg}";
+                lstMessege.Items.Add(formatted_msg);
+                // 리스트의 하단 라벨에 총 메시지 개수 업데이트 
+                lblCount.Text = $"총 메시지 수: {lstMessege.Items.Count}";
             }
             // 텍스트 초기화 및 포커스 유지
             

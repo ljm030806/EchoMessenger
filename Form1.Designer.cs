@@ -32,15 +32,16 @@
             txtMessege = new TextBox();
             lstMessege = new ListBox();
             btnSend = new Button();
+            lblCount = new Label();
             SuspendLayout();
             // 
-            // label1
+            // lblName
             // 
             lblName.AutoSize = true;
             lblName.Font = new Font("PMingLiU-ExtB", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblName.ForeColor = Color.Blue;
             lblName.Location = new Point(52, 38);
-            lblName.Name = "label1";
+            lblName.Name = "lblName";
             lblName.Size = new Size(337, 48);
             lblName.TabIndex = 0;
             lblName.Text = "Echo Messenger";
@@ -48,7 +49,7 @@
             // txtMessege
             // 
             txtMessege.Font = new Font("맑은 고딕", 12F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            txtMessege.Location = new Point(52, 353);
+            txtMessege.Location = new Point(52, 368);
             txtMessege.Name = "txtMessege";
             txtMessege.Size = new Size(526, 29);
             txtMessege.TabIndex = 1;
@@ -70,7 +71,7 @@
             btnSend.BackColor = Color.FromArgb(128, 255, 128);
             btnSend.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
             btnSend.ForeColor = Color.Black;
-            btnSend.Location = new Point(593, 333);
+            btnSend.Location = new Point(593, 348);
             btnSend.Name = "btnSend";
             btnSend.Size = new Size(117, 64);
             btnSend.TabIndex = 3;
@@ -78,12 +79,22 @@
             btnSend.UseVisualStyleBackColor = false;
             btnSend.Click += btnSend_Click;
             // 
+            // label1
+            // 
+            lblCount.AutoSize = true;
+            lblCount.Font = new Font("맑은 고딕", 9F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            lblCount.Location = new Point(52, 334);
+            lblCount.Name = "label1";
+            lblCount.Size = new Size(0, 15);
+            lblCount.TabIndex = 4;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 255, 192);
             ClientSize = new Size(842, 475);
+            Controls.Add(lblCount);
             Controls.Add(btnSend);
             Controls.Add(lstMessege);
             Controls.Add(txtMessege);
@@ -101,5 +112,6 @@
         private TextBox txtMessege;
         private ListBox lstMessege;
         private Button btnSend;
+        private Label lblCount;
     }
 }
