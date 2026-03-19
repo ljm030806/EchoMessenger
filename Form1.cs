@@ -22,12 +22,12 @@ namespace EchoMessenger
 
         }
 
-       
 
-        private void btnSend_MouseDown(object sender, MouseEventArgs e)
+        private void btnSend_Click(object sender, EventArgs e)
         {
-
-            lstMessege.Items.Add(txtMessege.Text);
+            string typed_msg;
+            typed_msg = txtMessege.Text;
+            lstMessege.Items.Add(typed_msg);
             txtMessege.Clear();
         }
     }

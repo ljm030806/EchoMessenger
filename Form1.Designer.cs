@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            lblName = new Label();
             txtMessege = new TextBox();
             lstMessege = new ListBox();
             btnSend = new Button();
@@ -36,26 +36,28 @@
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            label1.Location = new Point(52, 38);
-            label1.Name = "label1";
-            label1.Size = new Size(200, 32);
-            label1.TabIndex = 0;
-            label1.Text = "Echo Messenger";
+            lblName.AutoSize = true;
+            lblName.Font = new Font("PMingLiU-ExtB", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblName.ForeColor = Color.Blue;
+            lblName.Location = new Point(52, 38);
+            lblName.Name = "label1";
+            lblName.Size = new Size(337, 48);
+            lblName.TabIndex = 0;
+            lblName.Text = "Echo Messenger";
             // 
             // txtMessege
             // 
             txtMessege.Font = new Font("맑은 고딕", 12F, FontStyle.Bold, GraphicsUnit.Point, 129);
             txtMessege.Location = new Point(52, 353);
             txtMessege.Name = "txtMessege";
-            txtMessege.Size = new Size(556, 29);
+            txtMessege.Size = new Size(526, 29);
             txtMessege.TabIndex = 1;
             txtMessege.TextChanged += txtMessege_TextChanged;
             txtMessege.PreviewKeyDown += txtMessege_PreviewKeyDown;
             // 
             // lstMessege
             // 
+            lstMessege.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
             lstMessege.FormattingEnabled = true;
             lstMessege.Location = new Point(52, 93);
             lstMessege.Name = "lstMessege";
@@ -65,26 +67,27 @@
             // 
             // btnSend
             // 
-            btnSend.BackColor = Color.White;
+            btnSend.BackColor = Color.FromArgb(128, 255, 128);
             btnSend.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            btnSend.ForeColor = Color.Red;
-            btnSend.Location = new Point(625, 338);
+            btnSend.ForeColor = Color.Black;
+            btnSend.Location = new Point(593, 333);
             btnSend.Name = "btnSend";
-            btnSend.Size = new Size(87, 54);
+            btnSend.Size = new Size(117, 64);
             btnSend.TabIndex = 3;
             btnSend.Text = "전송";
             btnSend.UseVisualStyleBackColor = false;
-            btnSend.MouseDown += btnSend_MouseDown;
+            btnSend.Click += btnSend_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 255, 192);
             ClientSize = new Size(842, 475);
             Controls.Add(btnSend);
             Controls.Add(lstMessege);
             Controls.Add(txtMessege);
-            Controls.Add(label1);
+            Controls.Add(lblName);
             Margin = new Padding(2);
             Name = "Form1";
             Text = "Echo Messenger";
@@ -94,7 +97,7 @@
 
         #endregion
 
-        private Label label1;
+        private Label lblName;
         private TextBox txtMessege;
         private ListBox lstMessege;
         private Button btnSend;
